@@ -1,5 +1,4 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 
 interface Todo {
   id: number;

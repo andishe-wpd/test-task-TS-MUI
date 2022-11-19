@@ -1,7 +1,6 @@
 import Chip from "@mui/material/Chip/Chip";
 import Stack from "@mui/material/Stack/Stack";
-import TextField from "@mui/material/TextField/TextField";
-import React from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { removeTodo, selectTodos } from "../../../store";
 import SingleBox from "./SingleBox";
