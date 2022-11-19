@@ -32,10 +32,13 @@ export const todosSlice = createSlice({
     removeTodo: (state, action: PayloadAction<number>) => {
       state.todos = state.todos.filter(({ id }) => id !== action.payload);
     },
+    clearTodo: (state) => {
+      state.todos = [];
+    },
   },
 });
 
-export const { addTodo, removeTodo } = todosSlice.actions;
+export const { addTodo, removeTodo ,clearTodo} = todosSlice.actions;
 
 const store = configureStore({
   reducer: {

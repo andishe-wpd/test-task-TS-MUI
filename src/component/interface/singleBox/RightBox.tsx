@@ -23,6 +23,7 @@ const RightBox = () => {
         {todos.map((itm: any, idx: any) => {
           return (
             <Stack
+              key={itm.id}
               sx={{
                 mt: 1,
                 mx: 1,
@@ -30,7 +31,7 @@ const RightBox = () => {
               direction="row"
               spacing={3}
               onClick={() => {
-                dispatch(removeTodo(itm.id))
+                dispatch(removeTodo(itm.id));
               }}
             >
               <Chip
@@ -42,7 +43,6 @@ const RightBox = () => {
                 }}
                 color="primary"
                 label={itm.text}
-                key={itm.id}
               />
             </Stack>
           );

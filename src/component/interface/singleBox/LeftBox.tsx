@@ -4,25 +4,24 @@ import ListItem from "@mui/material/ListItem/ListItem";
 import ListItemText from "@mui/material/ListItemText/ListItemText";
 import TextField from "@mui/material/TextField/TextField";
 import SingleBox from "./SingleBox";
-import CommentIcon from "@mui/icons-material/Comment";
-import { FixedSizeList, ListChildComponentProps } from "react-window";
+import { FixedSizeList } from "react-window";
 import Box from "@mui/material/Box/Box";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
 import Button from "@mui/material/Button/Button";
 import AddBoxIcon from "@mui/icons-material/AddBox";
-import { useDispatch, useSelector } from "react-redux";
-import { FC, useCallback, useRef } from "react";
-import { addTodo, selectTodos } from "../../../store";
+import { useDispatch } from "react-redux";
+import { FC } from "react";
+import { addTodo, clearTodo } from "../../../store";
+import ListItemAvatar from "@mui/material/ListItemAvatar/ListItemAvatar";
+import Avatar from "@mui/material/Avatar/Avatar";
+import ImageIcon from "@mui/icons-material/Image";
+import ClearButton from "../ClearButton";
 
 const LeftBox = () => {
-  const todos = useSelector(selectTodos);
   const dispatch = useDispatch();
-
-  const newTodoRef = useRef<HTMLInputElement>(null);
   const onAddTodo = (title: string) => {
     dispatch(addTodo(title));
   };
-console.log(todos)
   return (
     <SingleBox>
       <TextField
@@ -49,7 +48,12 @@ function renderRow(props: any) {
       onClick={() => props.data(`Item ${index + 1}`)}
     >
       <ListItemButton>
-        <ListItemText primary={`Item ${index + 1}`} />{" "}
+        <ListItemAvatar>
+          <Avatar>
+            <ImageIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={`Item ${index + 1}`} secondary="Jan 9, 2014" />
         <AddBoxIcon sx={{ fontSize: 30 }}></AddBoxIcon>
       </ListItemButton>
     </ListItem>
@@ -69,22 +73,14 @@ export const VirtualizedList: FC<{ addItem: any }> = ({ addItem }) => {
       <FixedSizeList
         height={450}
         width="100%"
-        itemSize={46}
-        itemCount={200}
+        itemSize={66}
+        itemCount={10}
         overscanCount={5}
         itemData={addItem}
       >
         {renderRow}
       </FixedSizeList>
-      <Button
-        sx={{
-          width: "100%",
-          mt: 2,
-        }}
-        variant="contained"
-      >
-        CLEAR LIST
-      </Button>
+      <ClearButton />
     </Box>
   );
 };
