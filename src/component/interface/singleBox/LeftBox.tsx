@@ -5,7 +5,11 @@ import ListItemText from "@mui/material/ListItemText/ListItemText";
 import TextField from "@mui/material/TextField/TextField";
 import SingleBox from "./SingleBox";
 import CommentIcon from "@mui/icons-material/Comment";
-
+import { FixedSizeList, ListChildComponentProps } from "react-window";
+import Box from "@mui/material/Box/Box";
+import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
+import Button from "@mui/material/Button/Button";
+import AddBoxIcon from '@mui/icons-material/AddBox';
 const LeftBox = () => {
   return (
     <SingleBox>
@@ -17,31 +21,53 @@ const LeftBox = () => {
           width: "98%",
         }}
       />
+      <VirtualizedList />{" "}
+    </SingleBox>
+  );
+};
 
-      <List
+function renderRow(props: ListChildComponentProps) {
+  const { index, style } = props;
+
+  return (
+    <ListItem style={style} key={index} component="div" disablePadding>
+      <ListItemButton>
+        <ListItemText primary={`Item ${index + 1}`} />{" "}
+        <AddBoxIcon sx={{ fontSize: 30 }}></AddBoxIcon>
+      </ListItemButton>
+    </ListItem>
+  );
+}
+
+export const VirtualizedList = () => {
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        height: 450,
+        bgcolor: "background.paper",
+        mt: 2,
+      }}
+    >
+      <FixedSizeList
+        height={450}
+        width="100%"
+        itemSize={46}
+        itemCount={200}
+        overscanCount={5}
+      >
+        {renderRow}
+      </FixedSizeList>
+      <Button
         sx={{
           width: "100%",
-          maxWidth: 360,
-          bgcolor: "background.paper",
-          maxHeight: "100px",
+          mt: 2,
         }}
+        variant="contained"
       >
-        {[1, 2, 3, 4].map((value) => (
-          <ListItem
-            key={value}
-            disableGutters
-            secondaryAction={
-              <IconButton aria-label="comment">
-                <CommentIcon />
-              </IconButton>
-            }
-            sx={{ borderBottom: 1, borderColor: "#f5f5f5" }}
-          >
-            <ListItemText primary={`Line item ${value}`} />
-          </ListItem>
-        ))}
-      </List>
-    </SingleBox>
+        CLEAR LIST
+      </Button>
+    </Box>
   );
 };
 

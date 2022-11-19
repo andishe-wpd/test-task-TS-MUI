@@ -7,7 +7,7 @@ const SingleBox: FC<any> = (props) => {
       sx={{
         width: 1 / 4,
         flexWrap: "wrap",
-        height: "73vh",
+        height: 600,
         p: 1,
         bgcolor: (theme) =>
           theme.palette.mode === "dark" ? "#101010" : "grey.100",
