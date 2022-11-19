@@ -1,18 +1,16 @@
+import React from "react";
+import { FC } from "react";
+import { FixedSizeList } from "react-window";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../../../store";
 import ListItem from "@mui/material/ListItem/ListItem";
 import ListItemText from "@mui/material/ListItemText/ListItemText";
 import TextField from "@mui/material/TextField/TextField";
 import SingleBox from "./SingleBox";
-import { FixedSizeList } from "react-window";
 import Box from "@mui/material/Box/Box";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
-import Button from "@mui/material/Button/Button";
-import AddBoxIcon from "@mui/icons-material/AddBox";
-import { useDispatch } from "react-redux";
-import { FC } from "react";
-import { addTodo } from "../../../store";
 import ListItemAvatar from "@mui/material/ListItemAvatar/ListItemAvatar";
 import Avatar from "@mui/material/Avatar/Avatar";
-import React from "react";
 import Typography from "@mui/material/Typography/Typography";
 import ClearButton from "../ClearButton";
 
