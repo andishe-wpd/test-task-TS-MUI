@@ -9,8 +9,20 @@ import { FixedSizeList, ListChildComponentProps } from "react-window";
 import Box from "@mui/material/Box/Box";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
 import Button from "@mui/material/Button/Button";
-import AddBoxIcon from '@mui/icons-material/AddBox';
+import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useDispatch, useSelector } from "react-redux";
+import { FC, useCallback, useRef } from "react";
+import { addTodo, selectTodos } from "../../../store";
+
 const LeftBox = () => {
+  const todos = useSelector(selectTodos);
+  const dispatch = useDispatch();
+
+  const newTodoRef = useRef<HTMLInputElement>(null);
+  const onAddTodo = (title: string) => {
+    dispatch(addTodo(title));
+  };
+console.log(todos)
   return (
     <SingleBox>
       <TextField
@@ -21,16 +33,21 @@ const LeftBox = () => {
           width: "98%",
         }}
       />
-      <VirtualizedList />{" "}
+      <VirtualizedList addItem={onAddTodo} />{" "}
     </SingleBox>
   );
 };
 
-function renderRow(props: ListChildComponentProps) {
+function renderRow(props: any) {
   const { index, style } = props;
-
   return (
-    <ListItem style={style} key={index} component="div" disablePadding>
+    <ListItem
+      style={style}
+      key={index}
+      component="div"
+      disablePadding
+      onClick={() => props.data(`Item ${index + 1}`)}
+    >
       <ListItemButton>
         <ListItemText primary={`Item ${index + 1}`} />{" "}
         <AddBoxIcon sx={{ fontSize: 30 }}></AddBoxIcon>
@@ -39,7 +56,7 @@ function renderRow(props: ListChildComponentProps) {
   );
 }
 
-export const VirtualizedList = () => {
+export const VirtualizedList: FC<{ addItem: any }> = ({ addItem }) => {
   return (
     <Box
       sx={{
@@ -55,6 +72,7 @@ export const VirtualizedList = () => {
         itemSize={46}
         itemCount={200}
         overscanCount={5}
+        itemData={addItem}
       >
         {renderRow}
       </FixedSizeList>
