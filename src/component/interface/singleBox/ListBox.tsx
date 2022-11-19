@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { FixedSizeList } from "react-window";
 import { addTodo } from "../../../store";
-import List from "@mui/material/List/List";
 import ListItem from "@mui/material/ListItem/ListItem";
 import ListItemText from "@mui/material/ListItemText/ListItemText";
 import TextField from "@mui/material/TextField/TextField";
@@ -15,14 +14,16 @@ import Avatar from "@mui/material/Avatar/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import ClearButton from "../ClearButton";
 import CircularProgress from "@mui/material/CircularProgress/CircularProgress";
-const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
+const ListBox: FC<{
+  enteredData: any[];
+}> = ({ enteredData }) => {
   const dispatch = useDispatch();
   const onAddTodo = (title: string) => {
     dispatch(addTodo(title));
   };
-  const [dataSet, setDataSet] = useState<any>();
+  const [dataSet, setDataSet] = useState<any[]>();
   const [loading, setLoading] = useState<boolean>(true);
-  const [inputValue, setinputValue] = useState<any>("");
+  const [inputValue, setinputValue] = useState<string>("");
   // mock api behave
   useEffect(() => {
     setTimeout(() => {
@@ -34,7 +35,9 @@ const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
     let strArray = [...enteredData];
 
     setDataSet(
-      strArray.filter((word: any) => word.first_name.includes(inputValue))
+      strArray.filter((word: any) =>
+        word.first_name.toLowerCase().includes(inputValue.toLowerCase())
+      )
     );
   }, [inputValue]);
 
@@ -67,7 +70,7 @@ function renderRow(props: any) {
 
   const email = props.data.dataSet[index]?.email;
   if (!primary) {
-    return null
+    return null;
   }
   return (
     <ListItem
