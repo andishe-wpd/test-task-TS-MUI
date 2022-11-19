@@ -78,7 +78,7 @@ function renderRow(props: any) {
       key={index}
       component="div"
       disablePadding
-      onClick={() => props.data.addItem(primary)}
+      onClick={() => props.data.addItem(secindery ? primary : email)}
     >
       <ListItemButton>
         <ListItemAvatar>
