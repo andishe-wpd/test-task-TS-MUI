@@ -1,8 +1,9 @@
 import React from "react";
 import RightBox from "./singleBox/RightBox";
-import LeftBox from "./singleBox/LeftBox";
-import MainBox from "./singleBox/MainBox";
+import ListBox from "./singleBox/ListBox";
 import Box from "@mui/material/Box/Box";
+import { leftData } from "../../data/left";
+import { centerData } from "../../data/center";
 const BoxWrapper = () => {
   return (
     <div>
@@ -16,8 +17,8 @@ const BoxWrapper = () => {
           borderRadius: 1,
         }}
       >
-        <LeftBox />
-        <MainBox />
+        <ListBox enteredData={leftData} />
+        <ListBox enteredData={centerData} />
         <RightBox />
       </Box>
     </div>

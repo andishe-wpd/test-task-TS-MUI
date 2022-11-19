@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { FixedSizeList } from "react-window";
 import { addTodo } from "../../../store";
@@ -14,12 +14,22 @@ import ListItemAvatar from "@mui/material/ListItemAvatar/ListItemAvatar";
 import Avatar from "@mui/material/Avatar/Avatar";
 import ImageIcon from "@mui/icons-material/Image";
 import ClearButton from "../ClearButton";
-
-const LeftBox = () => {
+import CircularProgress from "@mui/material/CircularProgress/CircularProgress";
+const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
   const dispatch = useDispatch();
   const onAddTodo = (title: string) => {
     dispatch(addTodo(title));
   };
+  const [dataSet, setDataSet] = useState<any>();
+  const [loading, setLoading] = useState<boolean>(true);
+  // mock api behave
+  useEffect(() => {
+    setTimeout(() => {
+      setDataSet(enteredData);
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <SingleBox>
       <TextField
@@ -30,20 +40,29 @@ const LeftBox = () => {
           width: "98%",
         }}
       />
-      <VirtualizedList addItem={onAddTodo} />{" "}
+      <VirtualizedList
+        addItem={onAddTodo}
+        dataSet={dataSet}
+        loading={loading}
+      />{" "}
     </SingleBox>
   );
 };
 
 function renderRow(props: any) {
   const { index, style } = props;
+  const primary = props.data.dataSet[index].first_name;
+  const secindery = props.data.dataSet[index]?.last_name;
+  const fullName = `${primary} ${secindery ?  secindery : 'Doe'}`;
+
+  const email = props.data.dataSet[index].email;
   return (
     <ListItem
       style={style}
       key={index}
       component="div"
       disablePadding
-      onClick={() => props.data(`Item ${index + 1}`)}
+      onClick={() => props.data.addItem(primary)}
     >
       <ListItemButton>
         <ListItemAvatar>
@@ -51,14 +70,18 @@ function renderRow(props: any) {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={`Item ${index + 1}`} secondary="Jan 9, 2014" />
+        <ListItemText primary={fullName} secondary={email} />
         <AddBoxIcon sx={{ fontSize: 30 }}></AddBoxIcon>
       </ListItemButton>
     </ListItem>
   );
 }
 
-export const VirtualizedList: FC<{ addItem: any }> = ({ addItem }) => {
+export const VirtualizedList: FC<{
+  addItem: any;
+  dataSet: any;
+  loading: any;
+}> = ({ addItem, dataSet, loading }) => {
   return (
     <Box
       sx={{
@@ -68,19 +91,32 @@ export const VirtualizedList: FC<{ addItem: any }> = ({ addItem }) => {
         mt: 2,
       }}
     >
-      <FixedSizeList
-        height={450}
-        width="100%"
-        itemSize={66}
-        itemCount={10}
-        overscanCount={5}
-        itemData={addItem}
-      >
-        {renderRow}
-      </FixedSizeList>
+      {loading ? (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "450px",
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      ) : (
+        <FixedSizeList
+          height={450}
+          width="100%"
+          itemSize={66}
+          itemCount={100}
+          overscanCount={5}
+          itemData={{ addItem, dataSet }}
+        >
+          {renderRow}
+        </FixedSizeList>
+      )}
       <ClearButton />
     </Box>
   );
 };
 
-export default LeftBox;
+export default ListBox;

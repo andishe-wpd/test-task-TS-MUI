@@ -1,210 +1,602 @@
 export const centerData = [
-    {
-      "name": "State",
-      "value": [
-        "{category: \"men's clothing\", description: \"Your per…}",
-        "{category: \"men's clothing\", description: \"Slim-fit…}",
-        "{category: \"men's clothing\", description: \"great ou…}",
-        "{category: \"men's clothing\", description: \"The colo…}",
-        "{category: \"jewelery\", description: \"From our Legen…}",
-        "{category: \"jewelery\", description: \"Satisfaction G…}",
-        "{category: \"jewelery\", description: \"Classic Create…}",
-        "{category: \"jewelery\", description: \"Rose Gold Plat…}",
-        "{category: \"electronics\", description: \"USB 3.0 and…}",
-        "{category: \"electronics\", description: \"Easy upgrad…}",
-        "{category: \"electronics\", description: \"3D NAND fla…}",
-        "{category: \"electronics\", description: \"Expand your…}",
-        "{category: \"electronics\", description: \"21. 5 inche…}",
-        "{category: \"electronics\", description: \"49 INCH SUP…}",
-        "{category: \"women's clothing\", description: \"Note:T…}",
-        "{category: \"women's clothing\", description: \"100% P…}",
-        "{category: \"women's clothing\", description: \"Lightw…}",
-        "{category: \"women's clothing\", description: \"95% RA…}",
-        "{category: \"women's clothing\", description: \"100% P…}",
-        "{category: \"women's clothing\", description: \"95%Cot…}"
-      ],
-      "subHooks": [],
-      "hookSource": {
-        "lineNumber": 2,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-        "columnNumber": 340984
-      }
-    },
-    {
-      "name": "State",
-      "value": [],
-      "subHooks": [],
-      "hookSource": {
-        "lineNumber": 2,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-        "columnNumber": 341030
-      }
-    },
-    {
-      "name": "Effect",
-      "value": "ƒ () {}",
-      "subHooks": [],
-      "hookSource": {
-        "lineNumber": 2,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-        "columnNumber": 341074
-      }
-    },
-    {
-      "name": "",
-      "subHooks": [
-        {
-          "name": "",
-          "subHooks": [
-            {
-              "name": "s",
-              "subHooks": [
-                {
-                  "name": "Context",
-                  "value": {
-                    "store": "{@@observable: ƒ v() {}, dispatch: ƒ () {}, getStat…}",
-                    "subscription": "{addNestedSub: ƒ addNestedSub() {}, getListeners: ƒ…}"
-                  },
-                  "subHooks": [],
-                  "hookSource": {
-                    "lineNumber": 2,
-                    "functionName": "s",
-                    "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-                    "columnNumber": 214748
-                  }
-                }
-              ],
-              "hookSource": {
-                "lineNumber": 2,
-                "columnNumber": 216908,
-                "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-              }
-            }
-          ],
-          "hookSource": {
-            "lineNumber": 2,
-            "columnNumber": 217045,
-            "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-          }
-        }
-      ],
-      "hookSource": {
-        "lineNumber": 2,
-        "columnNumber": 341224,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-      }
-    },
-    {
-      "name": "",
-      "subHooks": [
-        {
-          "name": "s",
-          "subHooks": [
-            {
-              "name": "Context",
-              "value": {
-                "store": "{@@observable: ƒ v() {}, dispatch: ƒ () {}, getStat…}",
-                "subscription": "{addNestedSub: ƒ addNestedSub() {}, getListeners: ƒ…}"
-              },
-              "subHooks": [],
-              "hookSource": {
-                "lineNumber": 2,
-                "functionName": "s",
-                "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-                "columnNumber": 214748
-              }
-            }
-          ],
-          "hookSource": {
-            "lineNumber": 2,
-            "columnNumber": 215057,
-            "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-          }
-        },
-        {
-          "name": ".useSyncExternalStoreWithSelector",
-          "subHooks": [
-            {
-              "name": "Ref",
-              "value": {
-                "hasValue": true,
-                "value": "{name: \"\", type: \"None\"}"
-              },
-              "subHooks": [],
-              "hookSource": {
-                "lineNumber": 2,
-                "functionName": "t.useSyncExternalStoreWithSelector",
-                "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-                "columnNumber": 208654
-              }
-            },
-            {
-              "name": "Memo",
-              "value": [
-                "ƒ () {}",
-                "ƒ () {}"
-              ],
-              "subHooks": [],
-              "hookSource": {
-                "lineNumber": 2,
-                "functionName": "t.useSyncExternalStoreWithSelector",
-                "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-                "columnNumber": 208745
-              }
-            },
-            {
-              "name": "SyncExternalStore",
-              "value": {
-                "type": "None",
-                "name": ""
-              },
-              "subHooks": [],
-              "hookSource": {
-                "lineNumber": null,
-                "functionName": null,
-                "fileName": null,
-                "columnNumber": null
-              }
-            },
-            {
-              "name": "Effect",
-              "value": "ƒ () {}",
-              "subHooks": [],
-              "hookSource": {
-                "lineNumber": 2,
-                "functionName": "t.useSyncExternalStoreWithSelector",
-                "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-                "columnNumber": 209091
-              }
-            }
-          ],
-          "hookSource": {
-            "lineNumber": 2,
-            "columnNumber": 215109,
-            "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-          }
-        }
-      ],
-      "hookSource": {
-        "lineNumber": 2,
-        "columnNumber": 341230,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js"
-      }
-    },
-    {
-      "name": "Effect",
-      "value": "ƒ () {}",
-      "subHooks": [],
-      "hookSource": {
-        "lineNumber": 2,
-        "functionName": "Fi",
-        "fileName": "https://front-code-challenge-s11q.vercel.app/static/js/main.c2070500.js",
-        "columnNumber": 341284
-      }
-    }
-  ]
+  {
+    id: 1,
+    first_name: "Spencer",
+    email: "swhates0@prweb.com",
+    gender: 0.458248257,
+  },
+  {
+    id: 2,
+    first_name: "Glen",
+    email: "gcolborn1@edublogs.org",
+    gender: 0.1009483069,
+  },
+  {
+    id: 3,
+    first_name: "Merrel",
+    email: "mrhyme2@engadget.com",
+    gender: 0.3433050757,
+  },
+  {
+    id: 4,
+    first_name: "Doralin",
+    email: "drispine3@gizmodo.com",
+    gender: 0.2875931524,
+  },
+  {
+    id: 5,
+    first_name: "Issi",
+    email: "imaccrachen4@meetup.com",
+    gender: 0.7911939168,
+  },
+  {
+    id: 6,
+    first_name: "Horten",
+    email: "hbillison5@devhub.com",
+    gender: 0.3502465901,
+  },
+  {
+    id: 7,
+    first_name: "Neala",
+    email: "npick6@sbwire.com",
+    gender: 0.897968502,
+  },
+  {
+    id: 8,
+    first_name: "Colet",
+    email: "cbroadfield7@angelfire.com",
+    gender: 0.7106409497,
+  },
+  {
+    id: 9,
+    first_name: "Anatollo",
+    email: "afidele8@earthlink.net",
+    gender: 1.6916006276,
+  },
+  {
+    id: 10,
+    first_name: "Alex",
+    email: "akaman9@bbc.co.uk",
+    gender: 0.7564941595,
+  },
+  {
+    id: 11,
+    first_name: "Kessiah",
+    email: "kswallwella@vkontakte.ru",
+    gender: 0.6147655361,
+  },
+  {
+    id: 12,
+    first_name: "Archy",
+    email: "achippingb@usgs.gov",
+    gender: 0.1783548124,
+  },
+  {
+    id: 13,
+    first_name: "Doria",
+    email: "dyeardleyc@so-net.ne.jp",
+    gender: 0.4945195073,
+  },
+  {
+    id: 14,
+    first_name: "Janet",
+    email: "jludyed@disqus.com",
+    gender: 0.0011614835,
+  },
+  {
+    id: 15,
+    first_name: "Verile",
+    email: "vsharpline@ask.com",
+    gender: 2.7385434312,
+  },
+  {
+    id: 16,
+    first_name: "Ariana",
+    email: "alangthornf@usda.gov",
+    gender: 1.257897625,
+  },
+  {
+    id: 17,
+    first_name: "Sharron",
+    email: "srispeng@studiopress.com",
+    gender: 0.0934673666,
+  },
+  {
+    id: 18,
+    first_name: "Tallie",
+    email: "tjeannardh@narod.ru",
+    gender: 0.4136599582,
+  },
+  {
+    id: 19,
+    first_name: "Evan",
+    email: "emolfinoi@newsvine.com",
+    gender: 0.0975167424,
+  },
+  {
+    id: 20,
+    first_name: "Izabel",
+    email: "idudlestonej@usa.gov",
+    gender: 0.9968960928,
+  },
+  {
+    id: 21,
+    first_name: "Cheryl",
+    email: "clintillk@marketwatch.com",
+    gender: 1.5232183336,
+  },
+  {
+    id: 22,
+    first_name: "Lambert",
+    email: "lsidlowl@mediafire.com",
+    gender: 1.3099439921,
+  },
+  {
+    id: 23,
+    first_name: "Dorey",
+    email: "dgierckem@free.fr",
+    gender: 0.2713137778,
+  },
+  {
+    id: 24,
+    first_name: "Beryl",
+    email: "bgarredn@canalblog.com",
+    gender: 0.8642113004,
+  },
+  {
+    id: 25,
+    first_name: "Kathi",
+    email: "kbriento@rambler.ru",
+    gender: 0.3099429807,
+  },
+  {
+    id: 26,
+    first_name: "Teresa",
+    email: "telletsonp@odnoklassniki.ru",
+    gender: 2.9514662075,
+  },
+  {
+    id: 27,
+    first_name: "Timmie",
+    email: "tdaileq@nasa.gov",
+    gender: 1.8243206898,
+  },
+  {
+    id: 28,
+    first_name: "Ethyl",
+    email: "ewhitearr@cdbaby.com",
+    gender: 0.9366176611,
+  },
+  {
+    id: 29,
+    first_name: "Ranee",
+    email: "rwedgbrows@gov.uk",
+    gender: 0.1142280847,
+  },
+  {
+    id: 30,
+    first_name: "Jemmy",
+    email: "jscollit@free.fr",
+    gender: 0.5513405956,
+  },
+  {
+    id: 31,
+    first_name: "Deanne",
+    email: "dvennardu@hud.gov",
+    gender: 1.418239387,
+  },
+  {
+    id: 32,
+    first_name: "Zed",
+    email: "zwoodburnv@ibm.com",
+    gender: 0.0197313483,
+  },
+  {
+    id: 33,
+    first_name: "Adora",
+    email: "atrayfordw@wp.com",
+    gender: 2.4028944742,
+  },
+  {
+    id: 34,
+    first_name: "Duffie",
+    email: "dcharlestonx@java.com",
+    gender: 1.2664439234,
+  },
+  {
+    id: 35,
+    first_name: "Marquita",
+    email: "mashey@elpais.com",
+    gender: 0.0493110436,
+  },
+  {
+    id: 36,
+    first_name: "Ambur",
+    email: "aocallaghanz@chronoengine.com",
+    gender: 0.4672569436,
+  },
+  {
+    id: 37,
+    first_name: "Loralee",
+    email: "lkildahl10@gravatar.com",
+    gender: 1.6237554351,
+  },
+  {
+    id: 38,
+    first_name: "Amery",
+    email: "ajevon11@ocn.ne.jp",
+    gender: 1.9186391285,
+  },
+  {
+    id: 39,
+    first_name: "Lorianne",
+    email: "lcordet12@mashable.com",
+    gender: 3.5241711617,
+  },
+  {
+    id: 40,
+    first_name: "Channa",
+    email: "cmacalroy13@europa.eu",
+    gender: 0.2402166424,
+  },
+  {
+    id: 41,
+    first_name: "Neel",
+    email: "nstrettle14@icq.com",
+    gender: 2.5516336141,
+  },
+  {
+    id: 42,
+    first_name: "Dore",
+    email: "drowlett15@army.mil",
+    gender: 3.6633736933,
+  },
+  {
+    id: 43,
+    first_name: "Cathi",
+    email: "cweavill16@ucla.edu",
+    gender: 2.1323986503,
+  },
+  {
+    id: 44,
+    first_name: "Graehme",
+    email: "gaberdeen17@com.com",
+    gender: 0.0522469455,
+  },
+  {
+    id: 45,
+    first_name: "Alfie",
+    email: "apundy18@state.gov",
+    gender: 1.092315584,
+  },
+  {
+    id: 46,
+    first_name: "Adiana",
+    email: "abeldon19@weather.com",
+    gender: 1.0523763264,
+  },
+  {
+    id: 47,
+    first_name: "Chrisse",
+    email: "cnestor1a@mashable.com",
+    gender: 2.4115846213,
+  },
+  {
+    id: 48,
+    first_name: "Tawsha",
+    email: "tgubbin1b@ihg.com",
+    gender: 0.0574563788,
+  },
+  {
+    id: 49,
+    first_name: "Otha",
+    email: "ochadband1c@bloomberg.com",
+    gender: 1.4321150504,
+  },
+  {
+    id: 50,
+    first_name: "Urbano",
+    email: "ushervil1d@independent.co.uk",
+    gender: 0.3529159026,
+  },
+  {
+    id: 51,
+    first_name: "Maryjo",
+    email: "mleward1e@comsenz.com",
+    gender: 0.0022341023,
+  },
+  {
+    id: 52,
+    first_name: "Pooh",
+    email: "poag1f@vk.com",
+    gender: 0.5259012768,
+  },
+  {
+    id: 53,
+    first_name: "Julee",
+    email: "jstrond1g@reuters.com",
+    gender: 3.9856612102,
+  },
+  {
+    id: 54,
+    first_name: "Alexandr",
+    email: "ajanes1h@weather.com",
+    gender: 1.378627856,
+  },
+  {
+    id: 55,
+    first_name: "Stormi",
+    email: "sedden1i@sitemeter.com",
+    gender: 3.286971124,
+  },
+  {
+    id: 56,
+    first_name: "Kass",
+    email: "kbrockelsby1j@aboutads.info",
+    gender: 0.0349264371,
+  },
+  {
+    id: 57,
+    first_name: "Donella",
+    email: "dcamel1k@friendfeed.com",
+    gender: 1.1410228087,
+  },
+  {
+    id: 58,
+    first_name: "Teador",
+    email: "thulland1l@goo.gl",
+    gender: 1.1894566194,
+  },
+  {
+    id: 59,
+    first_name: "Alia",
+    email: "aseiler1m@squidoo.com",
+    gender: 0.824053268,
+  },
+  {
+    id: 60,
+    first_name: "Jacynth",
+    email: "jking1n@edublogs.org",
+    gender: 3.3320556636,
+  },
+  {
+    id: 61,
+    first_name: "Lewiss",
+    email: "llethbridge1o@wikipedia.org",
+    gender: 0.1630713939,
+  },
+  {
+    id: 62,
+    first_name: "Zaneta",
+    email: "ztiuit1p@sun.com",
+    gender: 0.1514445013,
+  },
+  {
+    id: 63,
+    first_name: "Bobbee",
+    email: "bkettlestringes1q@ibm.com",
+    gender: 0.1579342155,
+  },
+  {
+    id: 64,
+    first_name: "Florenza",
+    email: "fhamblett1r@sfgate.com",
+    gender: 0.8253008755,
+  },
+  {
+    id: 65,
+    first_name: "Hope",
+    email: "hmettricke1s@guardian.co.uk",
+    gender: 1.5351582565,
+  },
+  {
+    id: 66,
+    first_name: "Carmela",
+    email: "cpinnigar1t@fastcompany.com",
+    gender: 0.2829669475,
+  },
+  {
+    id: 67,
+    first_name: "Miranda",
+    email: "mbreem1u@walmart.com",
+    gender: 1.4292739088,
+  },
+  {
+    id: 68,
+    first_name: "Leshia",
+    email: "lmacness1v@livejournal.com",
+    gender: 0.9425177359,
+  },
+  {
+    id: 69,
+    first_name: "Killy",
+    email: "kdeddum1w@lulu.com",
+    gender: 1.2737147498,
+  },
+  {
+    id: 70,
+    first_name: "Kylynn",
+    email: "kastin1x@altervista.org",
+    gender: 0.866720447,
+  },
+  {
+    id: 71,
+    first_name: "Alvera",
+    email: "ahorbart1y@geocities.jp",
+    gender: 0.208631059,
+  },
+  {
+    id: 72,
+    first_name: "Mickey",
+    email: "mhugill1z@nyu.edu",
+    gender: 1.1234252952,
+  },
+  {
+    id: 73,
+    first_name: "Nollie",
+    email: "nasman20@wikispaces.com",
+    gender: 2.2689195331,
+  },
+  {
+    id: 74,
+    first_name: "Mellisent",
+    email: "mgerleit21@ox.ac.uk",
+    gender: 0.8374339855,
+  },
+  {
+    id: 75,
+    first_name: "Ivette",
+    email: "idimblebee22@tinyurl.com",
+    gender: 0.1700228668,
+  },
+  {
+    id: 76,
+    first_name: "Geraldine",
+    email: "gmackrill23@issuu.com",
+    gender: 0.1385537448,
+  },
+  {
+    id: 77,
+    first_name: "Kendrick",
+    email: "kboobyer24@ocn.ne.jp",
+    gender: 1.6251073171,
+  },
+  {
+    id: 78,
+    first_name: "Zollie",
+    email: "zstook25@nba.com",
+    gender: 0.7968709325,
+  },
+  {
+    id: 79,
+    first_name: "Lanni",
+    email: "ltreasure26@goodreads.com",
+    gender: 2.6100458222,
+  },
+  {
+    id: 80,
+    first_name: "Ardella",
+    email: "ahurley27@hubpages.com",
+    gender: 0.5608573833,
+  },
+  {
+    id: 81,
+    first_name: "Rudolfo",
+    email: "rbilles28@vistaprint.com",
+    gender: 1.6198374499,
+  },
+  {
+    id: 82,
+    first_name: "Emelia",
+    email: "emarkey29@1und1.de",
+    gender: 0.2964123481,
+  },
+  {
+    id: 83,
+    first_name: "Christin",
+    email: "cbalden2a@shinystat.com",
+    gender: 3.7911667433,
+  },
+  {
+    id: 84,
+    first_name: "Sherill",
+    email: "squarterman2b@taobao.com",
+    gender: 2.2029735083,
+  },
+  {
+    id: 85,
+    first_name: "Nichole",
+    email: "nhugnot2c@ebay.com",
+    gender: 0.8309354392,
+  },
+  {
+    id: 86,
+    first_name: "Jillayne",
+    email: "jlysons2d@ycombinator.com",
+    gender: 0.5563657097,
+  },
+  {
+    id: 87,
+    first_name: "Peyter",
+    email: "pvlies2e@tumblr.com",
+    gender: 0.1457455837,
+  },
+  {
+    id: 88,
+    first_name: "Tonia",
+    email: "tstorms2f@npr.org",
+    gender: 2.9420468274,
+  },
+  {
+    id: 89,
+    first_name: "Shannon",
+    email: "skedward2g@woothemes.com",
+    gender: 2.944479202,
+  },
+  {
+    id: 90,
+    first_name: "Nada",
+    email: "ntearney2h@joomla.org",
+    gender: 0.0429883875,
+  },
+  {
+    id: 91,
+    first_name: "Bonni",
+    email: "bboath2i@fastcompany.com",
+    gender: 0.3135373959,
+  },
+  {
+    id: 92,
+    first_name: "Mortie",
+    email: "mstangoe2j@booking.com",
+    gender: 1.2752369445,
+  },
+  {
+    id: 93,
+    first_name: "Ira",
+    email: "ireimer2k@fastcompany.com",
+    gender: 7.4658222542,
+  },
+  {
+    id: 94,
+    first_name: "Gerty",
+    email: "gbanville2l@chicagotribune.com",
+    gender: 0.3272756962,
+  },
+  {
+    id: 95,
+    first_name: "Ilka",
+    email: "irigeby2m@ed.gov",
+    gender: 1.3464565383,
+  },
+  {
+    id: 96,
+    first_name: "Edvard",
+    email: "eesom2n@archive.org",
+    gender: 2.4441448484,
+  },
+  {
+    id: 97,
+    first_name: "Pavla",
+    email: "pweller2o@nationalgeographic.com",
+    gender: 0.6826576695,
+  },
+  {
+    id: 98,
+    first_name: "Jeffry",
+    email: "jheinle2p@smugmug.com",
+    gender: 0.2585615944,
+  },
+  {
+    id: 99,
+    first_name: "Viva",
+    email: "vskentelbery2q@house.gov",
+    gender: 0.0126869434,
+  },
+  {
+    id: 100,
+    first_name: "Mitchell",
+    email: "mvivash2r@ehow.com",
+    gender: 0.0422950179,
+  },
+];
