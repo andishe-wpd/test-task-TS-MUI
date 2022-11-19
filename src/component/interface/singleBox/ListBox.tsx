@@ -22,6 +22,7 @@ const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
   };
   const [dataSet, setDataSet] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
+  const [inputValue, setinputValue] = useState<any>("");
   // mock api behave
   useEffect(() => {
     setTimeout(() => {
@@ -29,6 +30,13 @@ const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
       setLoading(false);
     }, 2000);
   }, []);
+  useEffect(() => {
+    let strArray = [...enteredData];
+
+    setDataSet(
+      strArray.filter((word: any) => word.first_name.includes(inputValue))
+    );
+  }, [inputValue]);
 
   return (
     <SingleBox>
@@ -39,23 +47,28 @@ const ListBox: FC<{ enteredData: any }> = ({ enteredData }) => {
         sx={{
           width: "98%",
         }}
+        value={inputValue}
+        onChange={(e) => setinputValue(e.target.value)}
       />
       <VirtualizedList
         addItem={onAddTodo}
         dataSet={dataSet}
         loading={loading}
-      />{" "}
+      />
     </SingleBox>
   );
 };
 
 function renderRow(props: any) {
   const { index, style } = props;
-  const primary = props.data.dataSet[index].first_name;
+  const primary = props.data.dataSet[index]?.first_name;
   const secindery = props.data.dataSet[index]?.last_name;
-  const fullName = `${primary} ${secindery ?  secindery : 'Doe'}`;
+  const fullName = `${primary} ${secindery ? secindery : "Doe"}`;
 
-  const email = props.data.dataSet[index].email;
+  const email = props.data.dataSet[index]?.email;
+  if (!primary) {
+    return null
+  }
   return (
     <ListItem
       style={style}
